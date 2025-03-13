@@ -1,0 +1,229 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Navbar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: left;
+    padding: 15px 50px;
+    background: rgba(44, 62, 80, 0.9); /* Dark navy with transparency */
+    color: white;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    backdrop-filter: blur(10px);
+}
+
+.logo ul {
+    list-style: none;
+    margin-left: -50px;
+}
+
+.logo ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Navigation Links */
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    padding: 8px 12px;
+    transition: 0.3s;
+    border-radius: 5px;
+}
+
+nav ul li a:hover {
+    background: #1abc9c;
+}
+
+/* Banner Section */
+.banner {
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    text-align: left;
+    padding: 50px;
+    background: linear-gradient(to right, #2c3e50, #34495e);
+    color: white;
+    min-height: 50vh;
+}
+
+.bannerText {
+    max-width: 50%;
+}
+
+.bannerText h1 {
+    padding-top: 50px;
+    font-size: 42px;
+    color: white;
+}
+
+.bannerText h6 {
+    font-size: 20px;
+    font-weight: bold;
+    color: #1abc9c;
+}
+
+.bannerText p {
+    font-size: 16px;
+    line-height: 1.5;
+    max-width: 600px;
+    margin: auto;
+}
+
+.bannerText a {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 15px;
+    background: #1abc9c;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.bannerText a:hover {
+    background: #16a085;
+}
+
+/* Banner Image */
+.bannerImg img {
+    width: 250px;
+    border-radius: 15px;
+}
+/* Projects Section */
+.projects {
+    text-align: center; /* Ensures all text inside is centered */
+    padding: 40px 20px;
+    background: #ffffff;
+}
+
+/* Center the "My Projects" heading */
+.projects h2 {
+    font-size: 28px;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    text-align: center; /* Ensures heading is centered */
+    width: 100%; /* Makes sure it spans full width */
+}
+
+/* Project Container (Ensures Horizontal Layout) */
+.project-container {
+    display: flex;
+    justify-content: center;  /* Centers the entire row */
+    gap: 20px;  /* Adds spacing between boxes */
+    flex-wrap: wrap;  /* Ensures responsiveness */
+    align-items: stretch; /* Ensures all project boxes have equal height */
+}
+
+/* Project Box */
+.project-box {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 15px;
+    width: 250px;  /* Adjust width as needed */
+    height: 230px;  /* Increased height for better alignment */
+    border-radius: 18px;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    transition: 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;  /* Distributes content evenly */
+    align-items: center;  /* Centers content horizontally */
+    backdrop-filter: blur(10px);
+}
+/* Hover Effect */
+.project-box:hover {
+    transform: scale(1.05); /* Slight zoom effect */
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2); /* More depth */
+    background: rgba(255, 255, 255, 0.3); /* Slightly lighter */
+}
+/* Project Title */
+.project-box h3 {
+    font-size: 18px;
+    color: #2c3e50;
+    margin-bottom: 8px;
+}
+
+/* Project Description */
+.project-box p {
+    font-size: 14px;
+    color: #555;
+    flex-grow: 1;  /* Makes sure content fills space */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 5px;
+}
+
+/* View Details Button */
+.project-box a {
+    display: block;
+    width: 100px;  /* Adjust button size */
+    padding: 6px 0;
+    background: #1abc9c;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 12px;
+    text-align: center;
+    transition: 0.3s;
+    margin-bottom: 10px;
+}
+
+.project-box a:hover {
+    background: #16a085;
+}
+
+
+
+
+/* Responsive Design */
+@media (max-width: 900px) {
+    .banner {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .bannerImg img {
+        width: 200px;
+    }
+
+    .project-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .project-box {
+        width: 240px;
+        height: 190px;
+    }
+}
+
